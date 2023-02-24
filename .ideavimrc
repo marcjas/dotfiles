@@ -1,0 +1,31 @@
+" :source ~/.ideavimrc
+
+set scrolloff=8
+set incsearch
+
+" mute
+set visualbell
+set noerrorbells
+
+" plugins
+set commentary
+set NERDTree
+set highlightedyank
+
+set number
+" set relativenumber
+set hlsearch
+
+" binds
+let mapleader = " "
+map <C-c> <Esc>
+map <leader>pf <Action>(GotoFile)
+map <leader>zz <Action>(TogglePresentationMode)
+map / <Action>(Find)
+
+map <C-h> <Action>(PreviousTab)
+map <C-l> <Action>(NextTab)
+
+" use jetbrains jumplist
+map <C-o> <Action>(Back)
+map <C-i> <Action>(Forward)
