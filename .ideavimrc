@@ -1,0 +1,67 @@
+set scrolloff=8
+set incsearch
+set number
+set hlsearch
+
+" mute
+set visualbell
+set noerrorbells
+
+" plugins
+set commentary
+set highlightedyank
+set surround
+set multiple-cursors
+
+" binds
+let mapleader = " "
+map <C-c> <Esc>
+map <leader>zz <Action>(TogglePresentationMode)
+map <leader>z <Action>(ToggleDistractionFreeMode)
+map <C-f> <Action>(Find)
+map <C-r> <Action>(Replace)
+map <leader>b <Action>(ToggleLineBreakpoint)
+map <leader>t <Action>(ActivateTerminalToolWindow)
+map <C-q> <Action>(CloseContent)
+
+" vim.lsp.buf.rename()
+nmap <leader>rn <Action>(RenameElement)
+
+" vim.lsp.buf.code_action()
+nmap <leader>ca <Action>(ShowIntentionActions)
+
+" vim.lsp.buf.signature_help()
+nmap <C-h> <Action>(ParameterInfo)
+imap <C-h> <Action>(ParameterInfo)
+
+" goated
+map <C-j> <Action>(PreviousTab)
+map <C-k> <Action>(NextTab)
+
+" use jetbrain jumplist
+map <C-o> <Action>(Back)
+map <C-i> <Action>(Forward)
+
+" copy to clipboard register
+vmap <leader>y "+y
+" paste from clipboard register
+nnoremap <leader>p "+p
+" deletes whats currently highlighted and replaces it, but keeps what was originally in the unnamed register
+vnoremap <leader>p "_dP
+
+" multiple-cursors
+nmap <C-n> <Plug>NextWholeOccurrence
+xmap <C-n> <Plug>NextWholeOccurrence
+nmap g<C-n> <Plug>NextOccurrence
+xmap g<C-n> <Plug>NextOccurrence
+xmap <C-x> <Plug>SkipOccurrence
+xmap <C-p> <Plug>RemoveOccurrence
+
+nnoremap L $
+nnoremap H ^
+vnoremap L $
+vnoremap H ^
+
+" swap behavior
+vnoremap p P
+vnoremap P p
